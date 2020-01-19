@@ -75,3 +75,37 @@
 // console.log(fullname);
 
 
+//polindrome
+let text="abcba";
+
+checkPolindrome(text);
+
+// first version
+// function checkPolindrome(arr) {
+//     let lastindex=arr.length-1;
+//     let count=0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i]==arr[lastindex]){
+//             count++;
+//             lastindex--;
+//         }
+//     }
+//     if(count==arr.length){
+//         console.log("Polindrome");
+//     }else{
+//         console.log("Is not polindrome");
+//     }
+// }
+
+//second version
+function checkPolindrome(arr) {
+    let lastindex=arr.length-1;
+    for (let i = 0; i < arr.length/2; i++) {
+        if(arr[i]!=arr[lastindex]){
+            console.log("Is not polindrome");
+            return;
+        }
+        lastindex--;
+    }
+    console.log("Polindrome");
+}
